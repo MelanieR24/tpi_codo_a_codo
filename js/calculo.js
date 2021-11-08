@@ -1,6 +1,7 @@
 //variables
 var total = document.querySelector(".total").value;
 var resumen = document.querySelector(".resumen");
+var reset=document.querySelector(".reset");
 
 resumen.onclick = function sacartotal() {
     var cantidad = parseInt(document.querySelector(".cantidad").value);
@@ -27,4 +28,8 @@ resumen.onclick = function sacartotal() {
             descuento == 'Junior' ? (170 * cantidad) : 'Seleccione una opcion valida'
 
     document.querySelector(".total").innerHTML ="Total a pagar: $"+total;//aqui modifico eltexto del total para que aparezca con el precio
+}
+//aca borro el total si aprieta el boton de borrar
+reset.onclick=function Borrar(){
+    document.querySelector(".total").innerHTML ="Total a pagar: $";
 }
